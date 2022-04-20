@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Music Shop - Delivery Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/img/icons8-guitar-60.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="frontend/css/styles.css">
+
+
+    <!-- Load fonts style -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+<!-- начало Nav -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="nav_top">
+    <div class="container text-light">
+        <div class="w-100 d-flex justify-content-between">
+            <div>
+                <i class="fa fa-envelope mx-2"></i>
+                <a class="navbar-sm-brand text-light text-decoration-none"
+                   href="mailto:email@email.com">email@email.com</a>
+                <i class="fa fa-phone mx-2"></i>
+                <a class="navbar-sm-brand text-light text-decoration-none"
+                   href="tel:+375-29-6820360">+375-29-6820360</a>
+
+            </div>
+            <div>
+                <a class="text-light" href="https://fb.com/" target="_blank" rel="sponsored"><i
+                        class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
+                        class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://twitter.com/" target="_blank"><i
+                        class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
+                        class="fab fa-linkedin fa-sm fa-fw"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- конец Nav -->
+
+
+<!-- начало header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Music
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+             id="main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Магазин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- конец header -->
+
+<!-- Modal -->
+<div class="modal fade bg-white" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                <button type="submit" class="input-group-text bg-success text-light">
+                    <i class="fa fa-fw fa-search text-white"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--секция оплаты-->
+<section class="container py-5">
+    <div class="row align-items-center py-5">
+        <div class="mainbox">
+            <h1 class="h1 text-success"><b>Условия оплаты</b></h1>
+            <p><b>В нашем магазине Вы можете выбрать форму оплаты, которая удобна Вам.
+                Обращаем внимание, что независимо от выбранной формы оплаты,
+                стоимость товара не меняется и расчет осуществляется в белорусских рублях.</b></p>
+
+            <h2 class="h2 text-success"><b>Оплата наличными:</b></h2>
+            <ul>
+                <li>Вы сможете оплатить наличными курьеру, который доставит вашу покупку</li>
+                <li>Вы сможете оплатить наличными или банковской картой в кассе магазина, если вы самостоятельно
+                    забираете покупку
+                </li>
+            </ul>
+            <p>Заказ оплачивается наличными, после того, как вы проверили комплектность и качество товара.<br><br>
+                <b>Обращаем ваше внимание, что скидки и акции не суммируются.</b><br></p>
+
+            <h2 class="h2 text-success"><b>Оплата через систему "Расчёт" (ЕРИП)</b></h2>
+            <p><a href="http://hutkigrosh.by/img/ERIP_Logo-01.png" target="_blank">
+                <img class="pay-logo" src="http://globalsound.by/images/companies/1/logo-raschet.jpg?1420893771300"></a></p>
+            <p>Система ”Расчет“ – Автоматизированная Информационная Система Единого Расчетного и Информационного
+                Пространства (АИС ЕРИП)
+                создана Национальным банком Республики Беларусь в целях упрощения организации приема платежей
+                от физических и юридических лиц. (сайт системы -<a rel="nofollow" href="http://www.raschet.by">www.raschet.by,</a></p>
+            <p>телефон контакт-центра - 141). Система ”Расчет“ позволяет произвести оплату в любом удобном для Вас
+                месте,
+                в удобное для Вас время, в удобном для Вас пункте банковского обслуживания – банкомате, инфокиоске,
+                интернет-банке,
+                кассе банков, с помощью мобильного банкинга и т.д. (полный перечень пунктов банковского обслуживания).
+                Вы можете оплатить наши товары/услуги с использованием наличных денежных средств, электронных денег и
+                банковских
+                платежных карточек в пунктах банковского обслуживания банков, которые оказывают услуги по приему
+                платежей,
+                а также посредством инструментов дистанционного банковского обслуживания.</p>
+            <p>Если Вы осуществляете платеж в кассе банка, пожалуйста, сообщите кассиру о необходимости проведения
+                платежа
+                через систему ”Расчет“ (ЕРИП).</p>
+            <p>В каталоге сиcтемы ”Расчет“ услуги ООО “Глобал Саунд” находятся в разделе:
+                "Расчет" ЕРИП/Интернет-магазины/сервисы-> G-> MusicShop.by Для проведения платежа необходимо:</p>
+            <p>1. Выбрать пункт “Система “Расчет” (ЕРИП)</p>
+            <p>2. Выбрать последовательно вкладки: Интернет-магазины/сервисы-> G-> MusicShop.by</p>
+            <p>3. Ввести номер заказа полученный у менеджера , посредством смс(e-mail)-информирования либо на сайте
+                Globalsound.by</p>
+            <p>4. Проверить корректность информации</p>
+            <p>5. Совершить платеж.</p>
+            <p></p>
+            <p><br></p>
+
+            <h2 class="h2 text-success"><b>Банковской карточкой через Интернет</b></h2>
+            <p>Оплату производите с помощью ссылки, которую Вам пришлет наш менеджер, посредством банковской пластиковой
+                карточки.
+                На платежной странице будет указан номер заказа и сумма платежа. Для оплаты вам необходимо ввести свои
+                карточные
+                данные и подтвердить платеж, нажав кнопку «оплатить».
+                Если ваша карта поддерживает технологию 3-D Secure, вам будет предложено пройти стандартную
+                одноминутную процедуру проверки владельца карты на сайте вашего банка (банк, выдавший вашу карту).</p>
+            <p>После оплаты наш менеджер свяжется с вами указанным вами способом для уточнения деталей по доставке.</p>
+            <p>Обращаем ваше внимание, что после проведения платежа на ваш электронный адрес придет подтверждение
+                оплаты.
+                Просим вас сохранять данные оплат.</p>
+            <p>Мы принимаем платежи по следующим банковским картам: Visa, Visa Electron, MasterCard,
+                Maestro,Белкарт.</p>
+            <p><img class="payments" src="./frontend/img/payments4.png"></p>
+            <p><img class="bepaid" src="./frontend/img/59415c4b393c3.png"></p>
+            <p>Платежи по банковским картам осуществляются через систему электронных платежей bePaid.
+                Платежная страница системы отвечает всем требованиям безопасности передачи данных (PCI DSS Level 1).
+                Все конфиденциальные данные хранятся в зашифрованном виде и максимально устойчивы к взлому.</p>
+            <p><b><br></b></p>
+            <p><b>Если товар был оплачен картой через сайт, то возврат осуществляется на карту,
+                с которой была произведена оплата, срок поступления денежных средств на карту - от 3 до 30 дней
+                с момента осуществления возврата Продавцом.</b></p>
+        </div>
+    </div>
+</section>
+<!--конец секция оплаты-->
+
+<!-- начало сервисы -->
+<section class="container py-5">
+    <div class="row text-center pt-5 pb-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1 text-success"><b>Наши сервисы</b></h1>
+            <p class="text-success">
+                Уважаемые посетители, на этой странице
+                Вы можете ознакомиться с условиями доставки, способами оплаты и стоимостью доставки заказанных в нашем
+                салоне музыкальных инструментов.<br>
+                Внимание, цифровые пианино доставляются БЕСПЛАТНО!!* по Минску и крупным городам РБ
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <div class="h-100 py-5 services-icon-wap shadow">
+                <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
+                <h2 class="h5 mt-4 text-center">Доставка</h2>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <div class="h-100 py-5 services-icon-wap shadow">
+                <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
+                <h2 class="h5 mt-4 text-center">Возврат</h2>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <div class="h-100 py-5 services-icon-wap shadow">
+                <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
+                <h2 class="h5 mt-4 text-center">Скидки</h2>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <div class="h-100 py-5 services-icon-wap shadow">
+                <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
+                <h2 class="h5 mt-4 text-center">24 часа обслуживания</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- конец сервисы -->
+
+<!-- начало бренды -->
+<section class="bg-light py-5">
+    <div class="container my-4">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1 text-success"><b>Наши бренды</b></h1>
+                <p class="text-success">
+                    Мы сотрудничаем с многоими производителями, с мировым именем.
+                </p>
+            </div>
+            <div class="col-lg-9 m-auto tempaltemo-carousel">
+                <div class="row d-flex flex-row">
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="prev">
+                            <i class="text-light fas fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+
+                    <!--Карусель обертка-->
+                    <div class="col">
+                        <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="slide-brand"
+                             data-bs-ride="carousel">
+                            <!--слайды-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--первый слайд-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--первый слайд-->
+
+                                <!--второй слайд-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--второй слайд-->
+
+                                <!--третий слайд-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--третий слайд-->
+
+                            </div>
+                            <!--слайды-->
+                        </div>
+                    </div>
+                    <!--карусельная обертка-->
+
+                    <!--контроль слайдера-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="next">
+                            <i class="text-light fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!--контроль слайдера-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--конец бренды-->
+
+
+<!-- старт низ -->
+<footer class="bg-dark" id="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Музыкальный магазин</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        246052 г.Гомель ул.Советская 333
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel:+375296820360">+375296820360</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:email@email.com">email@email.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Товары</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Гитары</a></li>
+                    <li><a class="text-decoration-none" href="#">Клавишные</a></li>
+                    <li><a class="text-decoration-none" href="#">Ударные</a></li>
+                    <li><a class="text-decoration-none" href="#">Смычковые</a></li>
+                    <li><a class="text-decoration-none" href="#">Духовые</a></li>
+                    <li><a class="text-decoration-none" href="#">Народные</a></li>
+                    <li><a class="text-decoration-none" href="#">Звук</a></li>
+                    <li><a class="text-decoration-none" href="#">Студия</a></li>
+                    <li><a class="text-decoration-none" href="#">Аксессуары</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Дополнительно</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Главная</a></li>
+                    <li><a class="text-decoration-none" href="#">Блог</a></li>
+                    <li><a class="text-decoration-none" href="#">Магазин</a></li>
+                    <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                    <li><a class="text-decoration-none" href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i
+                                class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+                                class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i
+                                class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail">Email address</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+                           placeholder="Email address">
+                    <div class="input-group-text btn-success text-light">Subscribe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 bg-black">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light">
+                        Copyright &copy; 2022 Company Name
+                        | Designed by <a rel="sponsored" href="https://google.com" target="_blank">Music</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- конец низ -->
+
+
+<!-- начало Script -->
+<script src="frontend/js/jquery-1.11.0.min.js"></script>
+<script src="frontend/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="frontend/js/bootstrap.bundle.min.js"></script>
+<script src="frontend/js/main.js"></script>
+
+<!-- конец Script -->
+</body>
+
+</html>

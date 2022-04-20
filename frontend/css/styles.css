@@ -128,6 +128,18 @@ body, ul, li, p, a, label, input, div {
 .services-icon-wap {transition: .3s;}
 .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
 .services-icon-wap:hover {background: #69bb7e;}
+
+/* Other */
+.pay-logo{
+  width: 83px;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.payments{width: 448px;}
+.bepaid{
+  float: left;
+  margin: 0 10px 10px 0;
+}
 /* Contact map */
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}
