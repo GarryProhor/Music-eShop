@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Music Shop - Service Page</title>
+    <title>Music Shop - Shopping Cart</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/css/styles.css">
+    <link rel="stylesheet" href="frontend/css/bucket.css">
 
 
     <!-- Load fonts style -->
@@ -126,190 +127,89 @@
     </div>
 </div>
 
-<!--секция связи-->
+
+<!--начало корзина-->
 <section class="container py-5">
-    <div class="row text-center pt-5 pb-3">
-        <h1 class="h1 text-success"><b>Каналы связи</b></h1>
-        <div class="b-page">
-            <p>Вы можете получить консультацию ежедневно с 8:00 до 00:00</p>
-            <p>Выберите, пожалуйста, удобный канал связи и напишите нам:</p>
-            <p> <a href="https://chats.viber.com/21vek.by"><img class="chat" src="./frontend/img/viber.png" alt="viber"></a>
-                <a href="https://t.me/e21vekbot"><img class="chat" src="./frontend/img/telegram.png" alt="telegram"></a> </p>
-        </div>
+    <div class="row align-items-center py-5">
+
     </div>
 </section>
-<!--конец секция связи-->
 
-<!-- начало сервисы -->
-<section class="container py-5">
-    <div class="row text-center pt-5 pb-3">
-        <div class="col-lg-6 m-auto">
-            <h1 class="h1 text-success"><b>Наши сервисы</b></h1>
-            <p class="text-success">
-                Уважаемые посетители, на этой странице
-                Вы можете ознакомиться с условиями доставки, способами оплаты и стоимостью доставки заказанных в нашем салоне музыкальных инструментов.<br>
-                Внимание, цифровые пианино доставляются БЕСПЛАТНО!!* по Минску и крупным городам РБ
-
-            </p>
+<section id="do_action">
+    <div class="container">
+        <div class="heading">
+            <h3>What would you like to do next?</h3>
+            <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
         </div>
-    </div>
-    <div class="row">
-
-        <div class="col-md-6 col-lg-3 pb-5">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="delivery.html">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                    <h2 class="h5 mt-4 text-center">Доставка</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="chose_area">
+                    <ul class="user_option">
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Coupon Code</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Gift Voucher</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Estimate Shipping &amp; Taxes</label>
+                        </li>
+                    </ul>
+                    <ul class="user_info">
+                        <li class="single_field">
+                            <label>Country:</label>
+                            <select>
+                                <option>United States</option>
+                                <option>Bangladesh</option>
+                                <option>UK</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                                <option>Ucrane</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+                        </li>
+                        <li class="single_field">
+                            <label>Region / State:</label>
+                            <select>
+                                <option>Select</option>
+                                <option>Dhaka</option>
+                                <option>London</option>
+                                <option>Dillih</option>
+                                <option>Lahore</option>
+                                <option>Alaska</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+                        </li>
+                        <li class="single_field zip-field">
+                            <label>Zip Code:</label>
+                            <input type="text">
+                        </li>
+                    </ul>
+                    <a class="btn btn-default update" href="">Get Quotes</a>
+                    <a class="btn btn-default check_out" href="">Continue</a>
                 </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3 pb-5">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="return.html">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                    <h2 class="h5 mt-4 text-center">Возврат</h2>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3 pb-5">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="pay.html">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa-solid fa-money-bill-1-wave"></i></div>
-                    <h2 class="h5 mt-4 text-center">Оплата</h2>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3 pb-5">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="service.html">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                    <h2 class="h5 mt-4 text-center">24 часа обслуживания</h2>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- конец сервисы -->
-
-<!-- начало бренды -->
-<section class="bg-light py-5">
-    <div class="container my-4">
-        <div class="row text-center py-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1 text-success"><b>Наши бренды</b></h1>
-                <p class="text-success">
-                    Мы сотрудничаем с многоими производителями, с мировым именем.
-                </p>
             </div>
-            <div class="col-lg-9 m-auto tempaltemo-carousel">
-                <div class="row d-flex flex-row">
-                    <!--Controls-->
-                    <div class="col-1 align-self-center">
-                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="prev">
-                            <i class="text-light fas fa-chevron-left"></i>
-                        </a>
-                    </div>
-                    <!--End Controls-->
-
-                    <!--Карусель обертка-->
-                    <div class="col">
-                        <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="slide-brand"
-                             data-bs-ride="carousel">
-                            <!--слайды-->
-                            <div class="carousel-inner product-links-wap" role="listbox">
-
-                                <!--первый слайд-->
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--первый слайд-->
-
-                                <!--второй слайд-->
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--второй слайд-->
-
-                                <!--третий слайд-->
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
-                                                             alt="Brand Logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--третий слайд-->
-
-                            </div>
-                            <!--слайды-->
-                        </div>
-                    </div>
-                    <!--карусельная обертка-->
-
-                    <!--контроль слайдера-->
-                    <div class="col-1 align-self-center">
-                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="next">
-                            <i class="text-light fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                    <!--контроль слайдера-->
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <li>Cart Sub Total <span>$59</span></li>
+                        <li>Eco Tax <span>$2</span></li>
+                        <li>Shipping Cost <span>Free</span></li>
+                        <li>Total <span>$61</span></li>
+                    </ul>
+                    <a class="btn btn-default update" href="">Update</a>
+                    <a class="btn btn-default check_out" href="">Check Out</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--конец бренды-->
-
+<!--конец корзина-->
 
 <!-- старт низ -->
 <footer class="bg-dark" id="footer">
@@ -419,6 +319,7 @@
 <script src="frontend/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="frontend/js/bootstrap.bundle.min.js"></script>
 <script src="frontend/js/main.js"></script>
+<script src="frontend/js/bucket.js"></script>
 
 <!-- конец Script -->
 </body>

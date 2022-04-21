@@ -1,10 +1,574 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
+<head>
+    <title>Music Shop - Return Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/img/icons8-guitar-60.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="frontend/css/styles.css">
+
+
+    <!-- Load fonts style -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+<!-- начало Nav -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="nav_top">
+    <div class="container text-light">
+        <div class="w-100 d-flex justify-content-between">
+            <div>
+                <i class="fa fa-envelope mx-2"></i>
+                <a class="navbar-sm-brand text-light text-decoration-none"
+                   href="mailto:email@email.com">email@email.com</a>
+                <i class="fa fa-phone mx-2"></i>
+                <a class="navbar-sm-brand text-light text-decoration-none"
+                   href="tel:+375-29-6820360">+375-29-6820360</a>
+
+            </div>
+            <div>
+                <a class="text-light" href="https://fb.com/" target="_blank" rel="sponsored"><i
+                        class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
+                        class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://twitter.com/" target="_blank"><i
+                        class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
+                        class="fab fa-linkedin fa-sm fa-fw"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- конец Nav -->
+
+
+<!-- начало header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Music
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+             id="main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Магазин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- конец header -->
+
+<!-- Modal -->
+<div class="modal fade bg-white" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                <button type="submit" class="input-group-text bg-success text-light">
+                    <i class="fa fa-fw fa-search text-white"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--секция оплаты-->
+<section class="container py-5">
+    <div class="row align-items-center py-5">
+        <h1 class="h1 text-success"><b>Замена и возврат товара</b></h1>
+            <span>
+                <h3 class="h3 text-success"><b>Уважаемые покупатели!</b></h3>
+                <p>Во избежание конфликтных ситуаций предлагаем вам ознакомиться с данным разделом, в котором приведены все основные
+                    правила взаимодействия продавцов и покупателей, касающиеся продаваемых нашей организацией товаров.
+                    Все эти правила закреплены актами законодательства Республики Беларусь и носят обязательный характер как для продавцов,
+                    так и для покупателей.</p>
+                <p>Также обращаем ваше внимание, что все товары, продаваемые в нашем магазине официально импортированы в Республику Беларусь и
+                    имеют все необходимые документы, включая Сертификаты Соответствия национального образца и
+                    Свидетельства о государственной гигиенической регистрации для тех групп товаров, для которых они необходимы).</p>
+                <p><b>Выдержки из законодательных актов, регламентирующие возврат (замену) товара</b></p>
+                <p><b>ЗАКОН РЕСПУБЛИКИ БЕЛАРУСЬ от 9 января 2002 г. N 90-З «О защите прав потребителей»</b><br>
+                        в редакции от 13 июня 2018 г. №111-З<br>
+                        <a href="./frontend/pdf/Закон%20О%20защите%20прав%20потребителей.pdf" target="_blank">Полная версия статьи</a>
+                </p> <p><b>ГЛАВА 3. ЗАЩИТА ПРАВ ПОТРЕБИТЕЛЯ ПРИ РЕАЛИЗАЦИИ ЕМУ ТОВАРА</b></p>
+                <p><i><b>Статья 20. Права потребителя в;случае реализации ему товара ненадлежащего качества </b></i></p>
+                <p>1. В случае реализации товара ненадлежащего качества, если его недостатки не были оговорены продавцом,
+                    потребитель вправе по своему выбору потребовать:<br>
+                        1.1. замены недоброкачественного товара товаром надлежащего качества;<br>
+                        1.2. соразмерного уменьшения покупной цены товара;<br>
+                        1.3. незамедлительного безвозмездного устранения недостатков товара;<br>
+                        1.4. возмещения расходов по устранению недостатков товара.<br>
+                        2. В случае обнаружения недостатков товара, свойства которого не позволяют устранить эти недостатки
+                    (пищевые продукты, товары бытовой химии и др.), потребитель вправе по своему выбору потребовать замены такого товара
+                    товаром надлежащего качества либо соразмерного уменьшения покупной цены.<br>
+                        3. Вместо предъявления указанных в пунктах 1 и 2 статьи 20 Закона требований потребитель вправе
+                    расторгнуть договор розничной купли-продажи и потребовать возврата уплаченной за товар денежной суммы в соответствии
+                    с пунктом 4 статьи 27 Закона. </p>
+                <p><i><b>Статья 22. Безвозмездное устранение недостатков товара продавцом</b></i></p>
+                <p>1. Обнаруженные недостатки товара должны быть устранены продавцом (изготовителем, поставщиком, представителем, ремонтной организацией)
+                    безвозмездно и незамедлительно. В случае, если устранить недостатки товара незамедлительно не представляется возможным,
+                    максимальный срок их устранения не может превышать четырнадцати дней со дня предъявления потребителем требования
+                    об устранении недостатков товара. По письменному соглашению с потребителем этот срок может быть увеличен, но не более чем до
+                    тридцати дней.</p>
+                <p><i><b>Статья 23. Замена товара ненадлежащего качества</b></i></p>
+                <p>1. В случае обнаружения потребителем недостатков товара и предъявления требования о замене такого товара продавец
+                    (изготовитель, поставщик, представитель) обязан заменить такой товар незамедлительно, а при необходимости дополнительной
+                    проверки качества такого товара продавцом (изготовителем, поставщиком, представителем) — заменить его
+                    в течение четырнадцати дней со дня предъявления указанного требования.<br>
+                        При отсутствии у продавца (изготовителя, поставщика, представителя) необходимого для замены товара
+                    на день предъявления потребителем требования о его замене продавец (изготовитель, поставщик, представитель) должен заменить
+                    такой товар в течение месяца со дня предъявления указанного требования. В случае отсутствия у продавца
+                    (изготовителя, поставщика, представителя) товара данной модели (марки, типа, артикула и др.) по не зависящим от него причинам
+                    в течение месяца со дня предъявления требования потребителем продавец(изготовитель, поставщик, представитель) обязан
+                    предоставить ему аналогичный товар другой модели(марки, типа, артикула и др.) с согласия потребителя.</p>
+                <p><i><b>Статья 28. Право потребителя на обмен и возврат товара надлежащего качества</b></i></p>
+                <p>1. Потребитель вправе в течение четырнадцати дней с момента передачи ему непродовольственного товара, если более длительный срок
+                    не объявлен продавцом, в месте приобретения или иных местах, объявленных продавцом, возвратить товар надлежащего качества или
+                    обменять его на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации, произведя в случае разницы
+                    в цене необходимый перерасчет с продавцом.<br>
+                    2. Требование потребителя об обмене либо возврате товара подлежит удовлетворению, если <b>товар не был в употреблении, сохранены
+                        его потребительские свойства и имеются доказательства приобретения его у данного продавца.</b> В случае обмена либо возврата
+                    товара <b>потребитель обязан возвратить товар в потребительской упаковке,</b> если товар был продан в такой упаковке.<br>
+                    <b>3. Перечень непродовольственных товаров надлежащего качества, не подлежащих обмену и возврату, утверждается
+                        Правительством Республики Беларусь.</b><br>
+                    4. При возврате потребителем товара надлежащего качества его требование о возврате уплаченной за товар денежной суммы
+                    подлежит удовлетворению продавцом незамедлительно. В случае, если удовлетворить требование потребителя незамедлительно
+                    не представляется возможным, максимальный срок для удовлетворения требования не может превышать семи дней.
+                    За нарушение указанных сроков продавец уплачивает потребителю за каждый день просрочки неустойку в размере одного процента
+                    цены товара на день его реализации потребителю.<br>
+                        <b>Расчеты с потребителем при возврате уплаченной за товар денежной суммы осуществляются в той же форме, в которой
+                            производилась оплата товара, если иное не предусмотрено соглашением сторон.</b> </p>
+                <p><b>ПЕРЕЧЕНЬ НЕПРОДОВОЛЬСТВЕННЫХ ТОВАРОВ НАДЛЕЖАЩЕГО КАЧЕСТВА, НЕ ПОДЛЕЖАЩИХ ОБМЕНУ И ВОЗВРАТУ</b>
+                    — Текстильные товары(ткани из волокон всех видов, трикотажное и гардинное полотно, мех искусственный), лентоткацкие изделия
+                    (ленты, кружево, тесьма, шнуры, бахрома), ковровые изделия, провода, шнуры, кабели, линолеум, багет, пленка, клеенка и
+                    иные метражные товары.<br>
+            —Паркет, ламинат, пробковый пол, настенная пробка, плитка керамическая и керамогранитная, обои.*<br>
+            —Белье нательное, белье для новорожденных и детей ясельного возраста из всех видов тканей, бельевые трикотажные изделия, кроме
+                    спортивных, корсетные изделия.<br>
+            —Чулочно-носочные изделия.<br>
+            —Ювелирные изделия из драгоценных металлов, с драгоценными камнями, из драгоценных металлов со вставками из полудрагоценных
+                    и синтетических камней, ограненные драгоценные камни, изделия из жемчуга и янтаря.<br>
+            —Бижутерия.*<br>
+            —Технически сложные товары бытового назначения <em>(электрические бытовые машины и приборы, электрические нагревательные приборы,
+                        электроинструменты, электрические контрольно-измерительные приборы, телерадиотовары, электромузыкальные инструменты,
+                        фотоаппараты и фотокамеры цифровые, киноаппаратура любительская, телекоммуникационное оборудование бытового назначения,
+                        обладающее двумя и более функциями и имеющее сенсорный экран или элементы программного управления, часы, компьютеры
+                        персональные, планшеты, ноутбуки, печатающие устройства, мониторы (дисплеи), сканеры, игровые приставки с элементами
+                        программного управления, прочие устройства ввода и вывода, копировально-множительные машины, газонокосилки (триммеры)
+                        электрическим или бензиновым приводом, бензопилы, швейные машины, машины и аппараты вязальные, машины раскройные,
+                        для шитья меха, обметочные и стачивающе-обметочные, бытовая газовая аппаратура и иные товары с питанием от сети
+                        переменного тока),</em> накоторые установлены гарантийные сроки и в техническом паспорте (заменяющем его документе)
+                    которых имеется отметка о дате продажи.<br>
+            —Автомобили, тракторы, прицепы, мотовелотовары (велосипеды, мопеды, мотовелосипеды, мотоциклы, мотороллеры, снегоходы,
+                    квадроциклы и иная подобная мототехника с двигателем внутреннего сгорания или электродвигателем).<br>
+            —Кузова, кабины, шасси, рамы, двигатели к автомобилям, тракторам.<br>
+            —Прогулочные суда и иные плавучие средства бытового назначения.<br>
+            —Средства малой механизации садово-огородного применения с двигателем внутреннего сгорания или электродвигателем.<br>
+            —Мебельные гарнитуры и наборы, мебель с механизмами трансформации, приводимыми в движение электроприводом.<br>
+            —Парфюмерно-косметические товары.*<br>
+            —Маникюрные и педикюрные инструменты и наборы.*<br>
+            —Игрушки, карнавальные принадлежности (костюмы, маски, полумаски).*<br>
+            —Товары бытовой химии.*<br>
+            —Фотопленка, фотобумага, фотохимикаты.*<br>
+            —Ручки всех видов, автоматические карандаши, стержни, маркеры, фломастеры и иные аналогичные товары.*<br>
+            —Носители аудио-, видео- и иных видов информации.*<br>
+            —Печатные издания, в том числе почтовые марки, маркированные конверты и маркированные почтовые карточки.*<br>
+            —Предметы личной гигиены (зубные щетки, расчески, бигуди для волос, губки, парики, шиньоны, лезвия для бритья и другие
+                    аналогичные товары).*<br>
+            —Товары для профилактики и лечения заболеваний в домашних условиях (предметы санитарной гигиены из металла, резины, текстиля
+                    и других материалов, инструменты, приборы и аппаратура медицинские, линзы для очков, контактные линзы, предметы по уходу за детьми).*<br>
+            —Лекарственные средства.<br>
+            —Ветеринарные средства.<br>
+            —Изделия из полимерных материалов, контактирующие с пищевыми продуктами, в том числе для разового использования (посуда
+                    и принадлежности столовые и кухонные, емкости и упаковочные материалы для хранения и транспортировки пищевых продуктов
+                    бытового назначения, в том числе для разового использования).*<br>
+            —Животные, птицы, рыбы, корма для животных, птиц, рыб.*<br>
+            —Цветы, растения, семена.*<br>
+            —Товары секс-шопов специального назначения.*<br>
+            —Табачные изделия.<br>
+            —Жидкость для электронных систем курения.*<br>
+            —Гражданское оружие, составные части и компоненты гражданского огнестрельного оружия, патроны к нему, порох, пиротехнические изделия.<br>
+            —Элементы питания.*<br>
+            —Наушники.*<br>
+            ___________________________________________<br>
+            <i>* За исключением товаров, упакованных в герметичную (вакуумную) потребительскую упаковку, также в потребительскую упаковку,
+                обеспечивающую возможность установить, что товар не был в употреблении.<br>
+                        <b>ПЕРЕЧЕНЬ ТЕХНИЧЕСКИ СЛОЖНЫХ ТОВАРОВ, В ОТНОШЕНИИ КОТОРЫХ ПОТРЕБИТЕЛЬ ВПРАВЕ ТРЕБОВАТЬ ЗАМЕНЫ ТОВАРА ИЛИ
+                            ВОЗВРАТА УПЛАЧЕННОЙ ЗА НЕГО ДЕНЕЖНОЙ СУММЫ ПО ИСТЕЧЕНИИ 30 ДНЕЙ СО ДНЯ ПЕРЕДАЧИ ТОВАРА ПРОДАВЦОМ ПОТРЕБИТЕЛЮ
+                            ПРИ ОБНАРУЖЕНИИ СУЩЕСТВЕННОГО НЕДОСТАТКА В ТОВАРЕ ИЛИ НАРУШЕНИИ СРОКОВ БЕЗВОЗМЕЗДНОГО УСТРАНЕНИЯ НЕДОСТАТКОВ ТОВАРА</b><br>
+                        — Автомобили, тракторы, прицепы, мотовелотовары (мопеды, мотовелосипеды, мотоциклы, мотороллеры, снегоходы,
+                квадроциклы и иная подобная мототехника с электрическим или бензиновым приводом).<br>
+            —Кузова, кабины, шасси, рамы, двигатели к автомобилям, тракторам.<br>
+            —Прогулочные суда и другие плавучие средства бытового назначения.<br>
+            —Средства малой механизации садово-огородного применения.<br>
+            —Мебель с механизмами трансформации, приводимыми в движение электроприводом.<br>
+            —Электробытовые товары (холодильники, морозильники, стиральные машины автоматические и полуавтоматические, посудомоечные
+                машины, варочные панели, электроплиты с духовым шкафом, электрошкафы жарочные автоматические или с элементами программного
+                управления).<br>
+            —Телевизоры, видеомониторы, видеоаппаратура, комбинированная радиоэлектронная аппаратура, обладающая двумя и более функциями.<br>
+            —Компьютеры персональные, планшеты, ноутбуки и периферийные устройства к ним.<br>
+            —Отопительное оборудование (котлы и аппараты отопительные автоматические или с элементами программного управления).<br>
+            —Телекоммуникационное оборудование бытового назначения, обладающее двумя и более функциями и имеющее сенсорный экран или элементы
+                программного управления.<br>
+            —Фотоаппараты и фотокамеры цифровые.<br>
+            —Часы электронно-механические и электронные с двумя и более функциями.</p>
+                <p><b>ПРИЕМКА ТОВАРОВ после проведения проверки качества, экспертизы или безвозмездного устранения недостатков</b><br>
+                        Пункт 15 статьи 20 Закона Республики Беларусь от 09.01.2002 №90-З «О защите прав потребителей» в редакции от 13 июня
+                    2018г. №111-З.</p>
+                <p>Вслучае неявки потребителя за товаром после проведения проверки качества товара, экспертизы товара или безвозмездного
+                    устранения недостатков товара продавец (изготовитель, поставщик, представитель, ремонтная организация) вправе, в письменной
+                    форме предупредив потребителя, по истечении двух месяцев со дня направления такого предупреждения взыскать с потребителя
+                    убытки, понесенные в связи с хранением товара, за исключением случая, если потребитель не мог забрать товар по уважительной
+                    причине.</p> <hr>
+                <b>Уважаемые Клиенты, во избежание недоразумений просим вас внимательно осматривать товар при его получении</b>,
+                так как претензии к внешнему виду товара и его комплектности вы можете предъявлять <b>только во время осмотра товара</b>,
+                при его приемке от курьера.<br>
+                        Вы вправе <b>потребовать от курьера проверку</b> доставленного вам товара (внешнего вида, комплектности, работоспособности),
+                после чего оставить свою подпись в гарантийном талоне об отсутствии претензий к изделию.<br>
+                        Вы также имеете право<b> отказаться от доставленного товара</b>, если в нем обнаружен дефект.
+                <p><b>Претензии к внешнему виду и комплектации изделия после заполнения гарантийного талона и отбытия курьера не принимаются.</b></p>
+                <p><b>Действия потребителя при обнаружении недостатка в товаре:</b><br>
+                        —заполнить форму обратной связи с отделом сервиса на нашем сайте, после чего наши специалисты вам перезвонят; <br>
+                        —или обратиться в авторизованный <a href="#">сервисный центр</a> и заказать выезд инженера на дом.</p>
+        </span>
+    </div>
+</section>
+<!--конец секция оплаты-->
+
+<!-- начало сервисы -->
+<section class="container py-5">
+    <div class="row text-center pt-5 pb-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1 text-success"><b>Наши сервисы</b></h1>
+            <p class="text-success">
+                Уважаемые посетители, на этой странице
+                Вы можете ознакомиться с условиями доставки, способами оплаты и стоимостью доставки заказанных в нашем салоне музыкальных инструментов.<br>
+                Внимание, цифровые пианино доставляются БЕСПЛАТНО!!* по Минску и крупным городам РБ
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="delivery.html">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
+                    <h2 class="h5 mt-4 text-center">Доставка</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="return.html">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
+                    <h2 class="h5 mt-4 text-center">Возврат</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="pay.html">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa-solid fa-money-bill-1-wave"></i></div>
+                    <h2 class="h5 mt-4 text-center">Оплата</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3 pb-5">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="service.html">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
+                    <h2 class="h5 mt-4 text-center">24 часа обслуживания</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- конец сервисы -->
+
+<!-- начало бренды -->
+<section class="bg-light py-5">
+    <div class="container my-4">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1 text-success"><b>Наши бренды</b></h1>
+                <p class="text-success">
+                    Мы сотрудничаем с многоими производителями, с мировым именем.
+                </p>
+            </div>
+            <div class="col-lg-9 m-auto tempaltemo-carousel">
+                <div class="row d-flex flex-row">
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="prev">
+                            <i class="text-light fas fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+
+                    <!--Карусель обертка-->
+                    <div class="col">
+                        <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="slide-brand"
+                             data-bs-ride="carousel">
+                            <!--слайды-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--первый слайд-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--первый слайд-->
+
+                                <!--второй слайд-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--второй слайд-->
+
+                                <!--третий слайд-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_01.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_02.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_03.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="frontend/img/brand_04.png"
+                                                             alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--третий слайд-->
+
+                            </div>
+                            <!--слайды-->
+                        </div>
+                    </div>
+                    <!--карусельная обертка-->
+
+                    <!--контроль слайдера-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#slide-brand" role="button" data-bs-slide="next">
+                            <i class="text-light fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!--контроль слайдера-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--конец бренды-->
+
+
+<!-- старт низ -->
+<footer class="bg-dark" id="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Музыкальный магазин</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        246052 г.Гомель ул.Советская 333
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel:+375296820360">+375296820360</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:email@email.com">email@email.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Товары</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Гитары</a></li>
+                    <li><a class="text-decoration-none" href="#">Клавишные</a></li>
+                    <li><a class="text-decoration-none" href="#">Ударные</a></li>
+                    <li><a class="text-decoration-none" href="#">Смычковые</a></li>
+                    <li><a class="text-decoration-none" href="#">Духовые</a></li>
+                    <li><a class="text-decoration-none" href="#">Народные</a></li>
+                    <li><a class="text-decoration-none" href="#">Звук</a></li>
+                    <li><a class="text-decoration-none" href="#">Студия</a></li>
+                    <li><a class="text-decoration-none" href="#">Аксессуары</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Дополнительно</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Главная</a></li>
+                    <li><a class="text-decoration-none" href="#">Блог</a></li>
+                    <li><a class="text-decoration-none" href="#">Магазин</a></li>
+                    <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                    <li><a class="text-decoration-none" href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i
+                                class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+                                class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i
+                                class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail">Email address</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+                           placeholder="Email address">
+                    <div class="input-group-text btn-success text-light">Subscribe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 bg-black">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light">
+                        Copyright &copy; 2022 Company Name
+                        | Designed by <a rel="sponsored" href="https://google.com" target="_blank">Music</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- конец низ -->
+
+
+<!-- начало Script -->
+<script src="frontend/js/jquery-1.11.0.min.js"></script>
+<script src="frontend/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="frontend/js/bootstrap.bundle.min.js"></script>
+<script src="frontend/js/main.js"></script>
+
+<!-- конец Script -->
 </body>
+
 </html>
